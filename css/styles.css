@@ -13,6 +13,7 @@ html {
   box-sizing: inherit;
 }
 
+
 body {
   margin: 0;
 
@@ -97,6 +98,7 @@ figure {
 .site-nav-item-label {
   display: block;
   margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 
@@ -194,4 +196,113 @@ figure {
 
 .about > p {
   margin: 0;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 0;
+  }
+
+  .movie {
+    width: 100%;
+  }
+
+  .site-logo {
+    position: fixed;
+    top: 1rem;
+    left: 1.1rem;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    z-index: 200;
+  }
+  
+  .site-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 76.8px;
+    z-index: 100;
+    background-color: #ffffff;
+  }
+  
+  .site-nav-item {
+    display: block;
+    position: relative;
+    top: 57px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .movie {
+    position: relative;
+    left: 76.8px;
+  }
+
+  .movie-overview {
+    display: block;
+  }
+
+  .site-footer {
+    position: relative;
+    left: 76.8px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: black;
+  }
+
+  .footer-nav {
+    align-self: center;
+    background-color: black;
+    color: white;
+  }
+  .about {
+    padding-right: 10%;
+    background-color: black;
+    color: white;
+  }
+
+
+
+}
+
+@media (min-width: 992px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 100%;
+  }
+
+  .movie:first-child {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+  .movie:first-child .movie-backdrop {
+    display: block;
+    width: 100%;
+  }
+
+  .movie:first-child .movie-poster {
+    display: none;
+  }
+
+  .movie:first-child .movie-overview {
+    display: block;
+  }
+
+  .movie-backdrop {
+    display: none;
+  }
+  
+  .movie-poster {
+    display: block;
+  }
+
+  .movie-overview {
+    display: none;
+  } 
+
+
 }
